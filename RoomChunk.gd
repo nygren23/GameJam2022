@@ -24,7 +24,21 @@ func get_Objective_In_Room():
 func set_Params(var Params):
 	type = Params[0]
 	enemyAlive = Params[1]
-	objectiveInRoom	 = Params[2]
+	objectiveInRoom = Params[2]
 
 func decideNextRoom(currPos):
 	print("deciding next room: ")
+
+
+func decideNextRoom(curPos):
+	#print(curPos)
+	
+	if curPos[0]<0 or curPos[1]<0:
+		return null
+		
+	if curPos[0]<Global.dimensions[0] and curPos[1]<Global.dimensions[1]:
+		return Global.map[curPos[0]][curPos[1]]
+	else:
+		print("out of bounds")
+		return null
+>>>>>>> 535b18bca4326884111283815f2991649b54c4d0
