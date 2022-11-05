@@ -5,9 +5,8 @@ func _ready():
 	add_child(load("res://Player.tscn").instance())
 
 func _on_TransitionUp_body_entered(body):
-	get_tree().change_scene("res://Main.tscn")
-
+	get_tree().change_scene("res://CrossRoom.tscn")
 
 func _on_TransitionDown_body_entered(body):
-	get_tree().change_scene("res://HorizontalRoom.tscn")
+	get_tree().change_scene("res://VerticalRoom.tscn")
 	

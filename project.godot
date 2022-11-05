@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "GlobalStats",
+"language": "GDScript",
+"path": "res://GlobalStats.gd"
+}, {
 "base": "Node2D",
 "class": "RoomChunk",
 "language": "GDScript",
 "path": "res://RoomChunk.gd"
 } ]
 _global_script_class_icons={
+"GlobalStats": "",
 "RoomChunk": ""
 }
 

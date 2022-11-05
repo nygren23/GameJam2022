@@ -9,7 +9,6 @@ margin_left = 259.0
 margin_top = 434.0
 margin_right = 423.0
 margin_bottom = 482.0
-text = "This Label"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 710.0
