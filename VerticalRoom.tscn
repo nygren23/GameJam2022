@@ -17,7 +17,6 @@ rotation = 1.56715
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
 position = Vector2( 32.5693, 144 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="ColorRect3" type="ColorRect" parent="WallRight"]

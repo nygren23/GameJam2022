@@ -73,7 +73,7 @@ margin_right = 198.0
 margin_bottom = 11.0
 
 [node name="TransitionLeft" type="Area2D" parent="."]
-position = Vector2( -70, 285 )
+position = Vector2( -44, 288 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionLeft"]
 position = Vector2( 0, -1 )
@@ -85,20 +85,18 @@ rotation = 1.57013
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionDown"]
 position = Vector2( -2, 23.5014 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 5 )
 
 [node name="TransitionUp" type="Area2D" parent="."]
-position = Vector2( 518, -27 )
+position = Vector2( 514, -24 )
 rotation = 1.57013
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionUp"]
 position = Vector2( -2, 18.9964 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 5 )
 
 [node name="TransitionRight" type="Area2D" parent="."]
-position = Vector2( 1130, 302 )
+position = Vector2( 1049, 301 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionRight"]
 position = Vector2( 5, 2 )
