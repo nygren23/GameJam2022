@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://HorizontalRoom.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 508.25, 51 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 12.1563, 187.75 )
+
+[node name="HorizontalRoom" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2( 620, 173 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2( -115.25, 365 )
+shape = SubResource( 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Floor"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -622.0
+margin_top = 321.0
+margin_right = -5.0
+margin_bottom = 708.0
+rect_scale = Vector2( 1.65604, 0.248349 )
+
+[node name="Floor2" type="StaticBody2D" parent="."]
+position = Vector2( 517, 48 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
+position = Vector2( -11, 7 )
+shape = SubResource( 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Floor2"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -513.0
+margin_top = -52.0
+margin_right = 104.0
+margin_bottom = 343.0
+rect_scale = Vector2( 1.65604, 0.248349 )
+
+[node name="TransitionRight" type="Area2D" parent="."]
+position = Vector2( 1011, 408 )
+
+[node name="Hitbox" type="CollisionShape2D" parent="TransitionRight"]
+position = Vector2( -4, -114.25 )
+shape = SubResource( 2 )
+
+[node name="TransitionLeft" type="Area2D" parent="."]
+position = Vector2( 13, 405 )
+
+[node name="Hitbox" type="CollisionShape2D" parent="TransitionLeft"]
+position = Vector2( 2, -102 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="TransitionRight" to="." method="_on_TransitionRight_body_entered"]
+[connection signal="body_entered" from="TransitionLeft" to="." method="_on_TransitionLeft_body_entered"]

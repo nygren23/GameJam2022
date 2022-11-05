@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "RoomChunk",
+"language": "GDScript",
+"path": "res://RoomChunk.gd"
+} ]
+_global_script_class_icons={
+"RoomChunk": ""
+}
+
 [application]
 
 config/name="Game Jam 2022"
