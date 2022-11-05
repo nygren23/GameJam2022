@@ -2,7 +2,6 @@ extends Node2D
 
 class_name RoomChunk
 
-#var globalstats = GlobalStats.new()
 export(String) var type = "" setget set_Type, get_Type
 export(bool) var enemyAlive = false setget set_Enemy_Alive, get_Enemy_Alive
 export(bool) var objectiveInRoom = false setget set_Objective_In_Room, get_Objective_In_Room
@@ -26,6 +25,7 @@ func set_Params(var Params):
 	type = Params[0]
 	enemyAlive = Params[1]
 	objectiveInRoom = Params[2]
+
 
 
 func decideNextRoom(curPos):
