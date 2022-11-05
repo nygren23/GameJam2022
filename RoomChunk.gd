@@ -27,4 +27,4 @@ func set_Params(var Params):
 	objectiveInRoom	 = Params[2]
 
 func decideNextRoom(currPos):
-	pass
+	print("deciding next room: " + str(globalstats.getCurPos()))
