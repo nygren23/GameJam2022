@@ -24,7 +24,7 @@ func get_Objective_In_Room():
 func set_Params(var Params):
 	type = Params[0]
 	enemyAlive = Params[1]
-	objectiveInRoom = Params[2]
+	objectiveInRoom	 = Params[2]
 
 func decideNextRoom(currPos):
 	pass

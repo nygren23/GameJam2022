@@ -4,6 +4,7 @@ var speed = 300
 var screen_size = Vector2(1024,600)
 
 var velocity = Vector2.ZERO
+var bulletPath = preload('res://Bullet.tscn')
 
 func get_input():
 	velocity = Vector2()
@@ -15,9 +16,18 @@ func get_input():
 		velocity.y += 1
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
+	if Input.is_action_just_pressed("spacebar"):
+		shoot()
 	velocity = velocity.normalized() * speed
 
+#shoots a bullet where ever the mouse is.
+func shoot():
+	$gunsound.play()
+	var bullet = bulletPath.instance()
+	get_parent().add_child(bullet)
+	bullet.position = $Position2D.global_position
 
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+
