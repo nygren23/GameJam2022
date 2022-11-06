@@ -15,11 +15,11 @@ func get_input():
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 50
 		_animation_player.play("Walking")
-		#_pos_2d.scale.x = 1
+		_pos_2d.scale.x = 1
 	elif Input.is_action_pressed("move_left"):
 		velocity.x -= 50
 		_animation_player.play("Walking")
-		#_pos_2d.scale.x = -1
+		_pos_2d.scale.x = -1
 	elif Input.is_action_pressed("move_down"):
 		velocity.y += 50
 	elif Input.is_action_pressed("move_up"):
