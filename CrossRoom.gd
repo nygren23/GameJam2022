@@ -41,7 +41,6 @@ func _ready():
 		$Bottom.set_collision_mask(2)
 	
 	
-	
 	$UI/Position.text = "Current Room: " +  str(Global.curPos)
 
 func _on_TransitionLeft_body_entered(body):

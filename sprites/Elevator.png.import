@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Operative_304-Recovered.png-bdfc4ef5cb5080b8fbe497fcca887aad.stex"
+path="res://.import/Elevator.png-b2ae7ee67e023cf9ec8d029374c4162d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Operative_304-Recovered.png"
-dest_files=[ "res://.import/Operative_304-Recovered.png-bdfc4ef5cb5080b8fbe497fcca887aad.stex" ]
+source_file="res://sprites/Elevator.png"
+dest_files=[ "res://.import/Elevator.png-b2ae7ee67e023cf9ec8d029374c4162d.stex" ]
 
 [params]
 
