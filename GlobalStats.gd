@@ -22,6 +22,7 @@ var dimensions = [map.size(), map[0].size()]
 			
 
 # [enemy, objective, "LRUD"]
+# 'LRUD' = enable Left, Right, Up, Down walls
 var metadata = [[[false, false, "0000"], [false, false, "0000"], [false, false, "0110"]],
 				[[false, false, "1010"], [false, false, "0000"], [false, false, "0101"]],
 				[[false, false, "1001"], [false, false, "0000"], [false, true, "0000"]]]
