@@ -31,6 +31,7 @@ func _on_L1_pressed():
 	
 func _on_L2_pressed():
 	Global.level = 2
+	Global.timer_time_left = 3500
 	Global.map = Global.map2
 	Global.metadata = Global.metadata2
 	Global.mainLocation = Global.mainLocation2

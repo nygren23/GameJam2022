@@ -40,7 +40,7 @@ var metadata1 = [[[false, false, "0000"], [false, false, "0000"], [false, false,
 
 var metadata2 = [[[false, true, "1110"], [false, false, "0000"], [false, false, "0010"], [false, false, "0110"]],
 				[[false, false, "0000"], [false, false, "1110"], [false, false, "0000"], [false, false, "0000"]],
-				[[false, false, "1000"], [false, false, "0001"], [false, false, "0000"], [false, true, "0101"]],
+				[[false, false, "1000"], [false, false, "0001"], [false, false, "0000"], [false, false, "0101"]],
 				[[false, false, "1001"], [false, false, "0111"], [false, false, "1001"], [false, true, "0111"]]]
 
 var objectiveGet = false
@@ -61,6 +61,6 @@ func reset_level():
 	objectiveGet = false
 	lastDirection = "Right";
 
-	timer_time_left = 2000
+	timer_time_left = 2500
 	gameOver = false
 	youLose = false
