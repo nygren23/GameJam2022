@@ -1,6 +1,7 @@
 extends RoomChunk
 
 export (PackedScene) var objective_scene
+var interact_listen = false
 
 func _ready():
 	add_child(load("res://UI.tscn").instance())
