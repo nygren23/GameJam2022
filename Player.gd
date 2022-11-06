@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 150
+var speed = 300
 var screen_size = Vector2(1024,600)
 
 var velocity = Vector2.ZERO
@@ -13,17 +13,17 @@ onready var _pos_2d = $Position2D
 func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
+		velocity.x += 50
 		_animation_player.play("Walking")
-		_pos_2d.scale.x = 1
+		#_pos_2d.scale.x = 1
 	elif Input.is_action_pressed("move_left"):
-		velocity.x -= 1
+		velocity.x -= 50
 		_animation_player.play("Walking")
-		_pos_2d.scale.x = -1
+		#_pos_2d.scale.x = -1
 	elif Input.is_action_pressed("move_down"):
-		velocity.y += 1
+		velocity.y += 50
 	elif Input.is_action_pressed("move_up"):
-		velocity.y -= 1
+		velocity.y -= 50
 	else:
 		_sprite.set_frame(0)
 		_animation_player.stop()
