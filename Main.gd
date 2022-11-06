@@ -1,12 +1,11 @@
 extends RoomChunk
 
-var currentPosition = [0,0]
+
+var timer
 
 func _ready():
-	$UI/Label.text = "Current Room: [" +  str(currentPosition[0]) + ", " + str(currentPosition[1]) + "]"
+	$UI/Position.text = "Current Room: " +  str(Global.curPos)
 	
-func _process(delta):
-	pass
 
 func _on_Area2D_body_entered(body):
 	match decideNextRoom([Global.curPos[0], Global.curPos[1]+1]):

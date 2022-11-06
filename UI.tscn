@@ -4,14 +4,14 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Label" type="Label" parent="."]
-margin_left = 259.0
-margin_top = 434.0
-margin_right = 423.0
-margin_bottom = 482.0
+[node name="Position" type="Label" parent="."]
+margin_left = 19.0
+margin_top = 15.0
+margin_right = 183.0
+margin_bottom = 63.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 710.0
-margin_top = 118.0
-margin_right = 750.0
-margin_bottom = 158.0
+[node name="Timer" type="Label" parent="."]
+margin_left = 854.0
+margin_top = 13.0
+margin_right = 1002.0
+margin_bottom = 55.0

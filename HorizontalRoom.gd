@@ -3,7 +3,10 @@ extends RoomChunk
 func _ready():
 	add_child(load("res://UI.tscn").instance())
 	add_child(load("res://Player.tscn").instance())
-	$UI/Label.text = "Current Room: [" +  str(Global.curPos[0]) + ", " + str(Global.curPos[1]) + "]"
+	$UI/Position.text = "Current Room: " +  str(Global.curPos)
+	
+func _process(delta):
+	pass#$UI/Timer.text = str(Global.timer.time_left)
 	
 func _on_TransitionRight_body_entered(body):
 	match decideNextRoom([Global.curPos[0], Global.curPos[1]+1]):
