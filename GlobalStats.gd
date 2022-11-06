@@ -17,6 +17,12 @@ X - XRoom
 var map = [["M", "X"],
 			["X", "X"]]
 			
+
+# [enemy, objective]
+var metadata = [[[false, false], [true, true]],[[false, true], [false, true]]]
+
+var objectiveGet = false
+
 var curPos = [mainLocation[0], mainLocation[1]]
 
 func getCurPos():

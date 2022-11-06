@@ -1,5 +1,7 @@
 extends RoomChunk
 
+export (PackedScene) var objective_scene
+
 var currentPosition = [0,0]
 
 func _ready():
@@ -29,3 +31,9 @@ func _on_Area2D_body_entered(body):
 			Global.curPos[1] += 1
 			print("matched M")
 			get_tree().change_scene("res://Main.tscn")
+	
+	if Global.metadata[Global.curPos[0]][ Global.curPos[1]][1]:
+		var objective = objective_scene.instance()
+		get_parent().add_child(objective)
+		objective.position = $ObjectSpawn.global_position
+		

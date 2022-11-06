@@ -26,9 +26,6 @@ func set_Params(var Params):
 	enemyAlive = Params[1]
 	objectiveInRoom = Params[2]
 
-func decideNextRoom(currPos):
-	print("deciding next room: ")
-
 
 func decideNextRoom(curPos):
 	#print(curPos)
@@ -41,4 +38,3 @@ func decideNextRoom(curPos):
 	else:
 		print("out of bounds")
 		return null
->>>>>>> 535b18bca4326884111283815f2991649b54c4d0
