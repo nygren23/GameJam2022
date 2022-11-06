@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://CrossRoom.gd" type="Script" id=1]
 [ext_resource path="res://sprites/lift_controls.png" type="Texture" id=2]
-[ext_resource path="res://alice-in-dark-wonderland-123894.mp3" type="AudioStream" id=2]
-[gd_scene load_steps=10 format=2]
+[ext_resource path="res://alice-in-dark-wonderland-123894.mp3" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 74.875, 52.5 )
@@ -218,7 +217,7 @@ margin_bottom = 420.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 2 )
+stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="TransitionLeft" to="." method="_on_TransitionLeft_body_entered"]
 [connection signal="body_entered" from="TransitionDown" to="." method="_on_TransitionDown_body_entered"]
