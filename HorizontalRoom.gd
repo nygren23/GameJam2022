@@ -10,9 +10,9 @@ func _ready():
 	var player = preload("res://Player.tscn").instance()
 	print(Global.lastDirection)
 	if(Global.lastDirection == "Right"):
-		player.position = Vector2 (-150, 150)
+		player.position = Vector2 (-150, Global.lastPosition.y)
 	else:
-		player.position = Vector2 (650, 150)
+		player.position = Vector2 (650, Global.lastPosition.y)
 	add_child(player)
 	$UI/Position.text = "Current Room: " +  str(Global.curPos)
 	
@@ -24,6 +24,7 @@ func _ready():
 	
 	
 func _on_TransitionRight_body_entered(body):
+	Global.lastPosition = body.global_position
 	Global.lastDirection = "Right"
 	match decideNextRoom([Global.curPos[0], Global.curPos[1]+1]):
 		null:
@@ -48,6 +49,7 @@ func _on_TransitionRight_body_entered(body):
 			
 
 func _on_TransitionLeft_body_entered(body):
+	Global.lastPosition = body.global_position
 	Global.lastDirection = "Left"
 	match decideNextRoom([Global.curPos[0], Global.curPos[1]-1]):
 		null:
