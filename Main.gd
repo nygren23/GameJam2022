@@ -1,7 +1,6 @@
 extends RoomChunk
 
 
-var timer
 export (PackedScene) var objective_scene
 
 var currentPosition = [0,0]

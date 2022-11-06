@@ -17,6 +17,5 @@ func _on_Area2D_area_entered(area):
 
 
 func _on_Area2D_body_entered(body):
-	print("Hi mom. I here")
 	Global.objectiveGet = true
 	queue_free()

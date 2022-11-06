@@ -29,16 +29,8 @@ var objectiveGet = false
 var lastDirection = "Right";
 
 var curPos = [mainLocation[0], mainLocation[1]]
-var timer_time_left = 45
+var timer_time_left = 3000
+var gameOver = false
 
-func getCurPos():
-	return curPos
-	
-func getDimensions():
-	return dimensions
-	
-func setHPos(direction):
-	curPos[0] += direction
-	
-func setVPos(direction):
-	curPos[1] = direction
+func startTimer():
+	pass

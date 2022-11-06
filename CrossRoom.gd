@@ -25,9 +25,6 @@ func _ready():
 	
 	
 	$UI/Position.text = "Current Room: " +  str(Global.curPos)
-	
-func _process(delta):
-	pass#$UI/Timer.text = str(Global.timer.time_left)
 
 func _on_TransitionLeft_body_entered(body):
 	Global.lastDirection = "Left"

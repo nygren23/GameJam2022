@@ -13,8 +13,6 @@ func _ready():
 	add_child(player)
 	$UI/Position.text = "Current Room: " +  str(Global.curPos)
 	
-func _process(delta):
-	pass#$UI/Timer.text = str(Global.timer.time_left)
 
 func _on_TransitionUp_body_entered(body):
 	Global.lastDirection = "Up"

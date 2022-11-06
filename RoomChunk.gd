@@ -38,3 +38,13 @@ func decideNextRoom(curPos):
 	else:
 		print("out of bounds")
 		return null
+
+func _process(delta):
+	if (!Global.gameOver):
+		if (Global.objectiveGet):
+			print(Global.timer_time_left)
+			if(Global.timer_time_left < 0):
+				print("GetFucked")
+				Global.gameOver = true
+			Global.timer_time_left -= 100 * delta
+	

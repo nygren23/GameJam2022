@@ -4,6 +4,8 @@ var startingLocation = 0
 export (PackedScene) var objective_scene
 
 func _ready():
+	
+	
 	add_child(load("res://UI.tscn").instance())
 	var player = preload("res://Player.tscn").instance()
 	print(Global.lastDirection)
@@ -20,8 +22,6 @@ func _ready():
 		add_child(objective)
 
 	
-func _process(delta):
-	pass#$UI/Timer.text = str(Global.timer.time_left)
 	
 func _on_TransitionRight_body_entered(body):
 	Global.lastDirection = "Right"
