@@ -41,6 +41,7 @@ func shoot():
 func _physics_process(delta):
 	if(Global.youLose):
 		queue_free()
+		get_tree().change_scene("res://EndScene.tscn")
 	get_input()
 	velocity = move_and_slide(velocity)
 
