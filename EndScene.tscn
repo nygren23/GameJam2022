@@ -17,11 +17,11 @@ margin_right = 586.0
 margin_bottom = 141.0
 text = "You Died. Too much caffiene"
 
-[node name="Button" type="Button" parent="."]
+[node name="MainMenu" type="Button" parent="."]
 margin_left = 410.0
 margin_top = 219.0
 margin_right = 579.0
 margin_bottom = 273.0
 text = "Main Menu"
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_Button_pressed"]
