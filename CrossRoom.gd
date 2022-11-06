@@ -22,8 +22,6 @@ func _ready():
 		objective.position = Vector2 (250, 75)
 		add_child(objective)
 	
-	
-	
 	$UI/Position.text = "Current Room: " +  str(Global.curPos)
 
 func _on_TransitionLeft_body_entered(body):

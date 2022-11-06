@@ -28,8 +28,6 @@ func set_Params(var Params):
 
 
 func decideNextRoom(curPos):
-	#print(curPos)
-	
 	if curPos[0]<0 or curPos[1]<0:
 		return null
 		
