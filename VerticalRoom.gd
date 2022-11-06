@@ -7,9 +7,9 @@ func _ready():
 	var player = preload("res://Player.tscn").instance()
 	print(Global.lastDirection)
 	if(Global.lastDirection == "Up"):
-		player.position = Vector2 (Global.lastPosition.x, 200)
+		player.position = Vector2 (Global.lastPosition.x, 300)
 	else:
-		player.position = Vector2 (Global.lastPosition.x, 000)
+		player.position = Vector2 (Global.lastPosition.x, 100)
 	add_child(player)
 	$UI/Position.text = "Current Room: " +  str(Global.curPos)
 	
