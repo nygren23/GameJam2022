@@ -7,7 +7,11 @@ func _process(delta):
 	#if the game or round ends then the acorns despawn
 	pass
 
-func _on_Area2D_area_entered(area):
-	queue_free()
-	player.acorns += 1
 
+
+
+
+
+func _on_Area2D_body_entered(body):
+	Global.objectiveGet = true
+	queue_free()

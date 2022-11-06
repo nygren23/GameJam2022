@@ -10,6 +10,13 @@ func _process(delta):
 	pass
 
 func _on_Area2D_area_entered(area):
+	print("Hi mom. I here")
 	Global.objectiveGet = true
 	queue_free()
 
+
+
+func _on_Area2D_body_entered(body):
+	print("Hi mom. I here")
+	Global.objectiveGet = true
+	queue_free()
