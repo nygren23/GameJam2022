@@ -3,25 +3,25 @@
 [ext_resource path="res://CrossRoom.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 131.5, 90.5 )
+extents = Vector2( 74.875, 52.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 122.5, 89.25 )
+extents = Vector2( 75.5, 53.75 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 131, 89 )
+extents = Vector2( 74.5, 52.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 129.25, 85.25 )
+extents = Vector2( 75.125, 56.125 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 12, 253.004 )
+extents = Vector2( 12, 359.999 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 256, 90 )
+extents = Vector2( 384.5, 53.5 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 125, 119 )
+extents = Vector2( 78, 190.5 )
 
 [node name="CrossRoom" type="Node2D"]
 script = ExtResource( 1 )
@@ -30,56 +30,56 @@ script = ExtResource( 1 )
 position = Vector2( 843, 584 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomRight"]
-position = Vector2( 47.25, -78.5 )
+position = Vector2( 103.875, -40.5 )
 shape = SubResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="BottomRight"]
-margin_left = -81.0
-margin_top = -168.0
-margin_right = 183.0
-margin_bottom = 12.0
+margin_left = 29.0
+margin_top = -92.0
+margin_right = 179.0
+margin_bottom = 13.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="TopLeft" type="StaticBody2D" parent="."]
 position = Vector2( 36, 34 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopLeft"]
-position = Vector2( 88.5, 56.75 )
+position = Vector2( 41.5, 21.25 )
 shape = SubResource( 2 )
 
 [node name="ColorRect2" type="ColorRect" parent="TopLeft"]
-margin_left = -38.0
-margin_top = -29.0
-margin_right = 212.0
-margin_bottom = 147.0
+margin_left = -34.0
+margin_top = -32.0
+margin_right = 116.0
+margin_bottom = 73.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="TopRight" type="StaticBody2D" parent="."]
 position = Vector2( 1000, 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopRight"]
-position = Vector2( -110, 72 )
+position = Vector2( -53.5, 35.5 )
 shape = SubResource( 3 )
 
 [node name="ColorRect3" type="ColorRect" parent="TopRight"]
-margin_left = -244.0
+margin_left = -127.0
 margin_top = -14.0
-margin_right = 20.0
-margin_bottom = 166.0
+margin_right = 23.0
+margin_bottom = 91.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="BottomLeft" type="StaticBody2D" parent="."]
 position = Vector2( 58, 586 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomLeft"]
-position = Vector2( 58.75, -68.75 )
+position = Vector2( 19.875, -41.875 )
 shape = SubResource( 4 )
 
 [node name="ColorRect4" type="ColorRect" parent="BottomLeft"]
-margin_left = -66.0
-margin_top = -157.0
-margin_right = 191.0
-margin_bottom = 11.0
+margin_left = -56.0
+margin_top = -93.0
+margin_right = 94.0
+margin_bottom = 12.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="TransitionLeft" type="Area2D" parent="."]
@@ -94,7 +94,8 @@ position = Vector2( 530, 647 )
 rotation = 1.57013
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionDown"]
-position = Vector2( -2, 23.5014 )
+position = Vector2( -2, 18.9928 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 5 )
 
 [node name="TransitionUp" type="Area2D" parent="."]
@@ -122,31 +123,31 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2( 250, 78 )
+position = Vector2( 275.5, 41.5 )
 shape = SubResource( 6 )
 
 [node name="ColorRect" type="ColorRect" parent="Top"]
-margin_left = -12.0
+margin_left = -274.0
 margin_top = -14.0
-margin_right = 510.0
-margin_bottom = 169.0
+margin_right = 779.0
+margin_bottom = 95.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Bottom" type="StaticBody2D" parent="."]
 visible = false
-position = Vector2( 260, 431 )
+position = Vector2( 264, 430 )
 collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
-position = Vector2( 250, 78 )
+position = Vector2( 274, 115 )
 shape = SubResource( 6 )
 
 [node name="ColorRect" type="ColorRect" parent="Bottom"]
-margin_left = -12.0
-margin_top = -14.0
-margin_right = 510.0
-margin_bottom = 169.0
+margin_left = -300.0
+margin_top = 63.0
+margin_right = 791.0
+margin_bottom = 170.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Left" type="StaticBody2D" parent="."]
@@ -156,14 +157,14 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
-position = Vector2( 138, 108 )
+position = Vector2( 91, 100.5 )
 shape = SubResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="Left"]
-margin_left = 12.0
-margin_top = -23.0
-margin_right = 262.0
-margin_bottom = 248.0
+margin_left = -4.0
+margin_top = -205.0
+margin_right = 168.0
+margin_bottom = 403.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Right" type="StaticBody2D" parent="."]
@@ -173,14 +174,14 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
-position = Vector2( 138, 108 )
+position = Vector2( 199, 108 )
 shape = SubResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="Right"]
-margin_left = 12.0
-margin_top = -11.0
-margin_right = 274.0
-margin_bottom = 229.0
+margin_left = 122.0
+margin_top = -203.0
+margin_right = 283.0
+margin_bottom = 420.0
 color = Color( 0, 0, 0, 1 )
 
 [connection signal="body_entered" from="TransitionLeft" to="." method="_on_TransitionLeft_body_entered"]
