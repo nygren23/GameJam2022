@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/goofy-yell.mp3-81d765ef59e0a600532437916bd9abb9.mp3str"
+
+[deps]
+
+source_file="res://goofy-yell.mp3"
+dest_files=[ "res://.import/goofy-yell.mp3-81d765ef59e0a600532437916bd9abb9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
