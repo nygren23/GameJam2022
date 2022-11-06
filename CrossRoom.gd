@@ -12,7 +12,7 @@ func _ready():
 	elif(Global.lastDirection == "Left"):
 		player.position = Vector2 (650, 150)
 	elif(Global.lastDirection == "Right"):
-		player.position = Vector2 (-150, 150)
+		player.position = Vector2 (-150, -120)
 	else:
 		player.position = Vector2(300, -150)
 	add_child(player)
