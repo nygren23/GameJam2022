@@ -1,21 +1,32 @@
 extends KinematicBody2D
 
-var speed = 300
+var speed = 150
 var screen_size = Vector2(1024,600)
 
 var velocity = Vector2.ZERO
 var bulletPath = preload('res://Bullet.tscn')
 
+onready var _animation_player = $AnimationPlayer
+onready var _sprite = $Position2D/Sprite
+onready var _pos_2d = $Position2D
+
 func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
-	if Input.is_action_pressed("move_left"):
+		_animation_player.play("Walking")
+		_pos_2d.scale.x = 1
+	elif Input.is_action_pressed("move_left"):
 		velocity.x -= 1
-	if Input.is_action_pressed("move_down"):
+		_animation_player.play("Walking")
+		_pos_2d.scale.x = -1
+	elif Input.is_action_pressed("move_down"):
 		velocity.y += 1
-	if Input.is_action_pressed("move_up"):
+	elif Input.is_action_pressed("move_up"):
 		velocity.y -= 1
+	else:
+		_sprite.set_frame(0)
+		_animation_player.stop()
 	if Input.is_action_just_pressed("spacebar"):
 		shoot()
 	velocity = velocity.normalized() * speed

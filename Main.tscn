@@ -43,6 +43,7 @@ margin_top = 319.0
 margin_right = -203.0
 margin_bottom = 706.0
 rect_scale = Vector2( 1.65604, 0.248349 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource( 3 )
