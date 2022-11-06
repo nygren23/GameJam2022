@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hallelujah-chorus-9MB.mp3-f40b4f4fc0f3adbfac2bee4c432680fc.mp3str"
+
+[deps]
+
+source_file="res://hallelujah-chorus-9MB.mp3"
+dest_files=[ "res://.import/hallelujah-chorus-9MB.mp3-f40b4f4fc0f3adbfac2bee4c432680fc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
