@@ -28,6 +28,8 @@ func shoot():
 	bullet.position = $Position2D.global_position
 
 func _physics_process(delta):
+	if(Global.youLose):
+		queue_free()
 	get_input()
 	velocity = move_and_slide(velocity)
 

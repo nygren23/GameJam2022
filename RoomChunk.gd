@@ -38,3 +38,22 @@ func decideNextRoom(curPos):
 	else:
 		print("out of bounds")
 		return null
+
+var reignDeployed = false
+
+func _process(delta):
+	if !(reignDeployed):
+		print("Reign Deployed")
+		reignDeployed = true
+		var reign = load("res://Reign.tscn").instance()
+		reign.position = Vector2(200,1000)
+		add_child(reign)
+	
+	if (!Global.gameOver):
+		if (Global.objectiveGet):
+			#print(Global.timer_time_left)
+			if(Global.timer_time_left < 0):
+				print("GetFucked")
+				Global.gameOver = true
+			Global.timer_time_left -= 100 * delta
+	
