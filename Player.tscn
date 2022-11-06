@@ -6,7 +6,7 @@
 [ext_resource path="res://Animations/Firing.tres" type="Animation" id=4]
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 25.5, 56.5 )
+extents = Vector2( 25.5, 59.75 )
 
 [sub_resource type="Shader" id=2]
 
@@ -14,7 +14,7 @@ extents = Vector2( 25.5, 56.5 )
 shader = SubResource( 2 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 25.5, 58 )
+extents = Vector2( 25.5, 61 )
 
 [sub_resource type="Animation" id=6]
 length = 0.001
