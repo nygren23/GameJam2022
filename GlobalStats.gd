@@ -48,7 +48,7 @@ var objectiveGet = false
 var lastDirection = "Right";
 var lastPosition = Vector2.ZERO
 
-var timer_time_left = 2000
+var timer_time_left = 2500
 var gameOver = false
 var youLose = false
 
