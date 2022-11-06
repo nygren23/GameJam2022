@@ -20,7 +20,7 @@ var map = [["M", "H", "X"],
 var dimensions = [map.size(), map[0].size()]
 			
 
-# [enemy, objective]
+# [enemy, objective, room layout]
 var metadata = [[[false, false], [false, false], [false, false]],
 				[[false, false], [false, false], [false, false]],
 				[[false, false], [false, false], [false, true]]]
