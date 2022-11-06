@@ -9,8 +9,7 @@ var map
 var metadata
 var dimensions
 var curPos
-var player_on_lift = false
-var player_using_lift = false
+
 
 var mainLocation1 = [0,0]
 var mainLocation2 = [0,1]

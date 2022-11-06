@@ -13,28 +13,22 @@ onready var _pos_2d = $Position2D
 func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("move_right"):
-		if !Global.player_using_lift:
-			velocity.x += 50
-			_animation_player.play("Walking")
-			_pos_2d.scale.x = 1
+		velocity.x += 50
+		_animation_player.play("Walking")
+		_pos_2d.scale.x = 1
 	elif Input.is_action_pressed("move_left"):
-		if !Global.player_using_lift:
-			velocity.x -= 50
-			_animation_player.play("Walking")
-			_pos_2d.scale.x = -1
+		velocity.x -= 50
+		_animation_player.play("Walking")
+		_pos_2d.scale.x = -1
 	elif Input.is_action_pressed("move_down"):
-		if Global.player_using_lift:
-			velocity.y += 50
+		velocity.y += 50
 	elif Input.is_action_pressed("move_up"):
-		if Global.player_using_lift:
-			velocity.y -= 50
+		velocity.y -= 50
 	else:
 		_sprite.set_frame(0)
 		_animation_player.stop()
 	if Input.is_action_just_pressed("spacebar"):
 		shoot()
-	if Input.is_action_just_pressed("interact") && Global.player_on_lift:
-		Global.player_using_lift = !Global.player_using_lift
 	velocity = velocity.normalized() * speed
 
 #shoots a bullet where ever the mouse is.

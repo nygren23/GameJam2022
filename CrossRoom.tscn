@@ -19,11 +19,11 @@ extents = Vector2( 75.125, 56.125 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 12, 359.999 )
 
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 47, 68.25 )
-
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 384.5, 53.5 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 47, 68.25 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 78, 190.5 )
@@ -124,6 +124,10 @@ position = Vector2( 486, 271 )
 position = Vector2( 264, 430 )
 collision_layer = 4
 collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lift"]
+position = Vector2( 274, 115 )
+shape = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="Lift"]
 position = Vector2( 271, -27 )
