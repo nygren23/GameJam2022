@@ -28,6 +28,7 @@ margin_top = 100.0
 margin_right = 107.0
 margin_bottom = 487.0
 rect_scale = Vector2( 1.65604, 0.248349 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="WallLeft" type="StaticBody2D" parent="."]
 rotation = 1.5708
@@ -45,9 +46,10 @@ margin_top = -107.0
 margin_right = 361.0
 margin_bottom = 288.0
 rect_scale = Vector2( 1.65604, 0.248349 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="TransitionUp" type="Area2D" parent="."]
-position = Vector2( 500, 21 )
+position = Vector2( 500, -16 )
 rotation = 1.5708
 
 [node name="Hitbox" type="CollisionShape2D" parent="TransitionUp"]
@@ -55,7 +57,7 @@ position = Vector2( -3.34377, -9 )
 shape = SubResource( 2 )
 
 [node name="TransitionDown" type="Area2D" parent="."]
-position = Vector2( 499, 585 )
+position = Vector2( 504, 620 )
 
 [node name="Hitbox" type="CollisionShape2D" parent="TransitionDown"]
 position = Vector2( 10, -2 )

@@ -27,6 +27,7 @@ margin_top = 321.0
 margin_right = -5.0
 margin_bottom = 708.0
 rect_scale = Vector2( 1.65604, 0.248349 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="Floor2" type="StaticBody2D" parent="."]
 position = Vector2( 517, 48 )
@@ -44,6 +45,7 @@ margin_top = -52.0
 margin_right = 104.0
 margin_bottom = 343.0
 rect_scale = Vector2( 1.65604, 0.248349 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="TransitionRight" type="Area2D" parent="."]
 position = Vector2( 1047, 412 )

@@ -3,7 +3,6 @@ extends Node
 class_name GlobalStats
 
 ####### Constants #########
-var dimensions = [2,2]
 var mainLocation = [0,0]
 
 """
@@ -14,8 +13,11 @@ X - XRoom
 """
 #var map = [[preload('res://RoomChunk.gd').new().set_Params(["M", false, false]), preload('res://RoomChunk.gd').new().set_Params(["H", false, false])],
 #				[preload('res://RoomChunk.gd').new().set_Params(["H", false, false]), preload('res://RoomChunk.gd').new().set_Params(["V", false, true])]]
-var map = [["M", "X"],
-			["X", "X"]]
+var map = [["M", "X", "V"],
+			["X", "X", "H"],
+			["X", "V", "H"]]
+			
+var dimensions = [map.size(), map[0].size()]
 			
 
 # [enemy, objective]
@@ -24,6 +26,7 @@ var metadata = [[[false, false], [true, true]],[[false, true], [false, true]]]
 var objectiveGet = false
 
 var curPos = [mainLocation[0], mainLocation[1]]
+var timer_time_left = 45
 
 func getCurPos():
 	return curPos

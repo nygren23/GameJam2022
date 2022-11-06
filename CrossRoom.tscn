@@ -6,7 +6,7 @@
 extents = Vector2( 135.25, 90.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 94.5, 69.25 )
+extents = Vector2( 122.5, 89.25 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 131, 89 )
@@ -32,19 +32,21 @@ margin_left = -81.0
 margin_top = -168.0
 margin_right = 183.0
 margin_bottom = 12.0
+color = Color( 0, 0, 0, 1 )
 
 [node name="TopLeft" type="StaticBody2D" parent="."]
 position = Vector2( 36, 34 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopLeft"]
-position = Vector2( 60.5, 36.75 )
+position = Vector2( 88.5, 56.75 )
 shape = SubResource( 2 )
 
 [node name="ColorRect2" type="ColorRect" parent="TopLeft"]
 margin_left = -38.0
 margin_top = -29.0
-margin_right = 154.0
-margin_bottom = 108.0
+margin_right = 212.0
+margin_bottom = 147.0
+color = Color( 0, 0, 0, 1 )
 
 [node name="TopRight" type="StaticBody2D" parent="."]
 position = Vector2( 1000, 15 )
@@ -58,6 +60,7 @@ margin_left = -244.0
 margin_top = -14.0
 margin_right = 20.0
 margin_bottom = 166.0
+color = Color( 0, 0, 0, 1 )
 
 [node name="BottomLeft" type="StaticBody2D" parent="."]
 position = Vector2( 73, 582 )
@@ -71,6 +74,7 @@ margin_left = -66.0
 margin_top = -169.0
 margin_right = 198.0
 margin_bottom = 11.0
+color = Color( 0, 0, 0, 1 )
 
 [node name="TransitionLeft" type="Area2D" parent="."]
 position = Vector2( -44, 288 )

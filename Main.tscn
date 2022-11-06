@@ -14,22 +14,22 @@ extents = Vector2( 508.25, 47 )
 [sub_resource type="ShaderMaterial" id=3]
 
 [node name="Main" type="Node2D"]
-position = Vector2( 200, 0 )
+position = Vector2( -1, 0 )
 script = ExtResource( 2 )
 objective_scene = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 28, 113 )
+position = Vector2( 225, 107 )
 
 [node name="TransitionRight" type="Area2D" parent="."]
-position = Vector2( 813, 320 )
+position = Vector2( 1010, 314 )
 
 [node name="Hitbox" type="CollisionShape2D" parent="TransitionRight"]
 position = Vector2( 2, -2 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 623, 184 )
+position = Vector2( 820, 178 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -310.25, 365 )
@@ -47,13 +47,24 @@ rect_scale = Vector2( 1.65604, 0.248349 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource( 3 )
-margin_left = -122.0
-margin_top = 115.0
-margin_right = 13.0
-margin_bottom = 230.0
+margin_left = 70.0
+margin_top = 40.0
+margin_right = 304.0
+margin_bottom = 209.0
 color = Color( 0.0784314, 0.854902, 0.2, 1 )
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
+margin_left = -3.0
+margin_top = 2.0
+margin_right = 11.0
+margin_bottom = 2.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 110.0
+margin_top = 93.0
+margin_right = 239.0
+margin_bottom = 154.0
+text = "Main"
 
 [node name="ObjectSpawn" type="Position2D" parent="."]
 position = Vector2( 100, 100 )
