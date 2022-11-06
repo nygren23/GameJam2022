@@ -14,7 +14,6 @@ extents = Vector2( 508.25, 47 )
 [sub_resource type="ShaderMaterial" id=3]
 
 [node name="Main" type="Node2D"]
-position = Vector2( -1, 0 )
 script = ExtResource( 2 )
 objective_scene = ExtResource( 4 )
 
