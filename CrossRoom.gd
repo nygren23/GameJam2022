@@ -22,6 +22,24 @@ func _ready():
 		objective.position = Vector2 (250, 75)
 		add_child(objective)
 	
+	var blockedRoomString = Global.metadata[Global.curPos[0]][Global.curPos[1]][2]
+	if(blockedRoomString[0] == '1'):
+		$Left.visible = true
+		$Left.set_collision_layer(2)
+		$Left.set_collision_mask(2)
+	if(blockedRoomString[1] == '1'):
+		$Right.visible = true
+		$Right.set_collision_layer(2)
+		$Right.set_collision_mask(2)
+	if(blockedRoomString[2] == '1'):
+		$Top.visible = true
+		$Top.set_collision_layer(2)
+		$Top.set_collision_mask(2)
+	if(blockedRoomString[3] == '1'):
+		$Bottom.visible = true
+		$Bottom.set_collision_layer(2)
+		$Bottom.set_collision_mask(2)
+	
 	
 	
 	$UI/Position.text = "Current Room: " +  str(Global.curPos)
