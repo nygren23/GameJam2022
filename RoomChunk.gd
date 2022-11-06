@@ -27,7 +27,6 @@ func set_Params(var Params):
 	objectiveInRoom = Params[2]
 
 
-
 func decideNextRoom(curPos):
 	#print(curPos)
 	

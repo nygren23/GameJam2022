@@ -19,6 +19,12 @@ var map = [["M", "X", "V"],
 			
 var dimensions = [map.size(), map[0].size()]
 			
+
+# [enemy, objective]
+var metadata = [[[false, false], [true, true]],[[false, true], [false, true]]]
+
+var objectiveGet = false
+
 var curPos = [mainLocation[0], mainLocation[1]]
 var timer_time_left = 45
 

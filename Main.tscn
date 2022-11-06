@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objective.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 13.3125, 78 )
@@ -15,6 +16,7 @@ extents = Vector2( 508.25, 47 )
 [node name="Main" type="Node2D"]
 position = Vector2( -1, 0 )
 script = ExtResource( 2 )
+objective_scene = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 225, 107 )
@@ -63,5 +65,8 @@ margin_top = 93.0
 margin_right = 239.0
 margin_bottom = 154.0
 text = "Main"
+
+[node name="ObjectSpawn" type="Position2D" parent="."]
+position = Vector2( 100, 100 )
 
 [connection signal="body_entered" from="TransitionRight" to="." method="_on_Area2D_body_entered"]
