@@ -3,7 +3,7 @@
 [ext_resource path="res://HorizontalRoom.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 508.25, 51 )
+extents = Vector2( 516.625, 51 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12.1563, 187.75 )
@@ -15,7 +15,7 @@ script = ExtResource( 1 )
 position = Vector2( 620, 173 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2( -115.25, 365 )
+position = Vector2( -101.625, 373 )
 shape = SubResource( 1 )
 
 [node name="ColorRect3" type="ColorRect" parent="Floor"]
@@ -23,9 +23,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -643.0
-margin_top = 316.0
+margin_top = 320.0
 margin_right = 440.0
-margin_bottom = 421.0
+margin_bottom = 425.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Floor2" type="StaticBody2D" parent="."]
