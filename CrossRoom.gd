@@ -39,6 +39,12 @@ func _ready():
 		$Bottom.visible = true
 		$Bottom.set_collision_layer(2)
 		$Bottom.set_collision_mask(2)
+		$Lift.visible = false
+	else:
+		$Lift.visible = true
+		$Lift.set_collision_layer(2)
+		$Lift.set_collision_mask(2)
+		$Bottom.visible = false
 	
 	
 	$UI/Position.text = "Current Room: " +  str(Global.curPos)
@@ -140,3 +146,13 @@ func _on_TransitionUp_body_entered(body):
 			print("matched M")
 			get_tree().change_scene("res://Main.tscn")
 	
+
+
+func _on_Area2D_body_entered(body):
+	$UI/Lift_Prompt.show()
+	pass # Replace with function body.
+
+
+func _on_Area2D_body_exited(body):
+	$UI/Lift_Prompt.hide()
+	pass # Replace with function body.

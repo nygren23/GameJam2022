@@ -15,3 +15,11 @@ margin_left = 854.0
 margin_top = 13.0
 margin_right = 1002.0
 margin_bottom = 55.0
+
+[node name="Lift_Prompt" type="Label" parent="."]
+visible = false
+margin_left = 281.0
+margin_top = 112.0
+margin_right = 724.0
+margin_bottom = 173.0
+text = "Press 'E' to use lift."
