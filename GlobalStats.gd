@@ -20,10 +20,10 @@ var map = [["M", "H", "X"],
 var dimensions = [map.size(), map[0].size()]
 			
 
-# [enemy, objective]
-var metadata = [[[false, false], [false, false], [false, false]],
-				[[false, false], [false, false], [false, false]],
-				[[false, false], [false, false], [false, true]]]
+# [enemy, objective, "LRUD"]
+var metadata = [[[false, false, "0000"], [false, false, "0000"], [false, false, "0110"]],
+				[[false, false, "1010"], [false, false, "0000"], [false, false, "0101"]],
+				[[false, false, "1001"], [false, false, "0000"], [false, true, "0000"]]]
 
 var objectiveGet = false
 var lastDirection = "Right";
