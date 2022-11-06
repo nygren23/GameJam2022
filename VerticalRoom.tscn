@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://VerticalRoom.gd" type="Script" id=1]
+[ext_resource path="res://alice-in-dark-wonderland-123894.mp3" type="AudioStream" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 293.049, 76.0484 )
@@ -17,7 +18,6 @@ rotation = 1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
 position = Vector2( 32.5693, 169.048 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="ColorRect4" type="ColorRect" parent="WallRight"]
@@ -62,6 +62,9 @@ position = Vector2( 504, 620 )
 position = Vector2( 10, -2 )
 rotation = 1.5708
 shape = SubResource( 2 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
 
 [connection signal="body_entered" from="TransitionUp" to="." method="_on_TransitionUp_body_entered"]
 [connection signal="body_entered" from="TransitionDown" to="." method="_on_TransitionDown_body_entered"]

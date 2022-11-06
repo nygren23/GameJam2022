@@ -42,6 +42,12 @@ func decideNextRoom(curPos):
 var reignDeployed = false
 
 func _process(delta):
+	if (!Global.objectiveGet and !$AudioStreamPlayer2D.playing):
+		$AudioStreamPlayer2D.play(Global.preReignMusicStart / 100)
+	elif(Global.objectiveGet and $AudioStreamPlayer2D.playing):
+		$AudioStreamPlayer2D.stop()
+	elif($AudioStreamPlayer2D.playing):
+		Global.preReignMusicStart += delta * 100;
 	if !(reignDeployed):
 		print("Reign Deployed")
 		reignDeployed = true
