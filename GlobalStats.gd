@@ -13,9 +13,9 @@ X - XRoom
 """
 #var map = [[preload('res://RoomChunk.gd').new().set_Params(["M", false, false]), preload('res://RoomChunk.gd').new().set_Params(["H", false, false])],
 #				[preload('res://RoomChunk.gd').new().set_Params(["H", false, false]), preload('res://RoomChunk.gd').new().set_Params(["V", false, true])]]
-var map = [["M", "X", "V"],
-			["X", "X", "H"],
-			["X", "V", "H"]]
+var map = [["M", "H", "X"],
+			["X", "H", "X"],
+			["X", "H", "H"]]
 			
 var dimensions = [map.size(), map[0].size()]
 			
@@ -24,6 +24,7 @@ var dimensions = [map.size(), map[0].size()]
 var metadata = [[[false, false], [true, true]],[[false, true], [false, true]]]
 
 var objectiveGet = false
+var lastDirection = "Right";
 
 var curPos = [mainLocation[0], mainLocation[1]]
 var timer_time_left = 45

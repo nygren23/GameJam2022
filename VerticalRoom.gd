@@ -2,13 +2,20 @@ extends RoomChunk
 
 func _ready():
 	add_child(load("res://UI.tscn").instance())
-	add_child(load("res://Player.tscn").instance())
+	var player = preload("res://Player.tscn").instance()
+	print(Global.lastDirection)
+	if(Global.lastDirection == "Up"):
+		player.position = Vector2 (300, 300)
+	else:
+		player.position = Vector2 (300, 100)
+	add_child(player)
 	$UI/Position.text = "Current Room: " +  str(Global.curPos)
 	
 func _process(delta):
 	pass#$UI/Timer.text = str(Global.timer.time_left)
 
 func _on_TransitionUp_body_entered(body):
+	Global.lastDirection = "Up"
 	match decideNextRoom([Global.curPos[0]-1, Global.curPos[1]]):
 		null:
 			print("did not match next room")
@@ -31,6 +38,7 @@ func _on_TransitionUp_body_entered(body):
 			get_tree().change_scene("res://Main.tscn")
 
 func _on_TransitionDown_body_entered(body):
+	Global.lastDirection = "Down"
 	match decideNextRoom([Global.curPos[0]+1, Global.curPos[1]]):
 		null:
 			print("did not match next room")
