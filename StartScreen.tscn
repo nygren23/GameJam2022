@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://StartScreen.gd" type="Script" id=1]
+[ext_resource path="res://fonts/connection_ii/ConnectionII.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 65
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 2 )
 
 [node name="StartScreen" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,17 +22,23 @@ margin_bottom = 598.0
 color = Color( 0.231373, 0.482353, 0.686275, 1 )
 
 [node name="Title" type="Label" parent="."]
-margin_left = 432.0
-margin_top = 84.0
-margin_right = 546.0
-margin_bottom = 115.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 245.0
+margin_top = 37.0
+margin_right = 714.0
+margin_bottom = 102.0
+custom_fonts/font = SubResource( 1 )
 text = "Game Jam 2022"
 
 [node name="By" type="Label" parent="."]
-margin_left = 413.0
-margin_top = 128.0
-margin_right = 552.0
-margin_bottom = 142.0
+margin_left = 369.0
+margin_top = 107.0
+margin_right = 627.0
+margin_bottom = 132.0
+custom_fonts/font = SubResource( 2 )
 text = "By John, Alex, Blake"
 
 [node name="Level Select" type="Button" parent="."]
