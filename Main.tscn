@@ -40,6 +40,14 @@ margin_bottom = 706.0
 rect_scale = Vector2( 1.65604, 0.248349 )
 color = Color( 0, 0, 0, 1 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource( 3 )
+margin_left = 70.0
+margin_top = 40.0
+margin_right = 304.0
+margin_bottom = 209.0
+color = Color( 0.0784314, 0.854902, 0.2, 1 )
+
 [node name="UI" parent="." instance=ExtResource( 3 )]
 margin_left = -3.0
 margin_top = 2.0
