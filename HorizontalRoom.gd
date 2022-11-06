@@ -1,6 +1,7 @@
 extends RoomChunk
 
 var startingLocation = 0
+export (PackedScene) var objective_scene
 
 func _ready():
 	add_child(load("res://UI.tscn").instance())
@@ -12,6 +13,11 @@ func _ready():
 		player.position = Vector2 (650, 150)
 	add_child(player)
 	$UI/Position.text = "Current Room: " +  str(Global.curPos)
+	
+	if Global.metadata[Global.curPos[0]][ Global.curPos[1]][1]:
+		var objective = preload("res://Objective.tscn").instance()	
+		objective.position = Vector2 (250, 75)
+		add_child(objective)
 
 	
 func _process(delta):
@@ -39,6 +45,7 @@ func _on_TransitionRight_body_entered(body):
 			Global.curPos[1] += 1
 			print("matched M")
 			get_tree().change_scene("res://Main.tscn")
+			
 
 func _on_TransitionLeft_body_entered(body):
 	Global.lastDirection = "Left"
@@ -62,4 +69,5 @@ func _on_TransitionLeft_body_entered(body):
 			Global.curPos[1] -= 1
 			print("matched M")
 			get_tree().change_scene("res://Main.tscn")
+			
 

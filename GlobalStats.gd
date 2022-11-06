@@ -21,7 +21,9 @@ var dimensions = [map.size(), map[0].size()]
 			
 
 # [enemy, objective]
-var metadata = [[[false, false], [true, true]],[[false, true], [false, true]]]
+var metadata = [[[false, false], [false, false], [false, false]],
+				[[false, false], [false, false], [false, false]],
+				[[false, false], [false, false], [false, true]]]
 
 var objectiveGet = false
 var lastDirection = "Right";

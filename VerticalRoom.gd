@@ -1,5 +1,7 @@
 extends RoomChunk
 
+export (PackedScene) var objective_scene
+
 func _ready():
 	add_child(load("res://UI.tscn").instance())
 	var player = preload("res://Player.tscn").instance()
@@ -59,4 +61,5 @@ func _on_TransitionDown_body_entered(body):
 			Global.curPos[0] += 1
 			print("matched M")
 			get_tree().change_scene("res://Main.tscn")
+	
 	
