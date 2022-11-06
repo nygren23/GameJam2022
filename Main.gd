@@ -10,6 +10,7 @@ func _ready():
 	
 
 func _on_Area2D_body_entered(body):
+	Global.lastPosition = body.global_position
 	
 	match decideNextRoom([Global.curPos[0], Global.curPos[1]+1]):
 		null:

@@ -44,11 +44,15 @@ var metadata2 = [[[false, true, "1110"], [false, false, "0000"], [false, false, 
 				[[false, false, "1001"], [false, false, "0111"], [false, false, "1001"], [false, true, "0111"]]]
 
 var objectiveGet = false
+
 var lastDirection = "Right";
+var lastPosition = Vector2.ZERO
 
 var timer_time_left = 2000
 var gameOver = false
 var youLose = false
+
+var musicStart = 700.0
 
 func startTimer():
 	pass
