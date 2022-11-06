@@ -29,8 +29,9 @@ var objectiveGet = false
 var lastDirection = "Right";
 
 var curPos = [mainLocation[0], mainLocation[1]]
-var timer_time_left = 3000
+var timer_time_left = 2000
 var gameOver = false
+var youLose = false
 
 func startTimer():
 	pass
