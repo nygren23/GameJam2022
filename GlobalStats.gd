@@ -53,6 +53,7 @@ var gameOver = false
 var youLose = false
 
 var musicStart = 700.0
+var preReignMusicStart = 0.0
 
 func startTimer():
 	pass

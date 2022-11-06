@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/alice-in-dark-wonderland-123894.mp3-424d84a0b594bd50fa8f7c79eb55487a.mp3str"
+
+[deps]
+
+source_file="res://alice-in-dark-wonderland-123894.mp3"
+dest_files=[ "res://.import/alice-in-dark-wonderland-123894.mp3-424d84a0b594bd50fa8f7c79eb55487a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
