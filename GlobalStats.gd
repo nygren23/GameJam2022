@@ -3,6 +3,7 @@ extends Node
 class_name GlobalStats
 
 ####### Constants #########
+var level
 var mainLocation = [0,0]
 
 """

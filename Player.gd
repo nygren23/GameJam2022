@@ -1,10 +1,11 @@
 extends KinematicBody2D
 
-var speed = 300
+var speed = 400
 var screen_size = Vector2(1024,600)
 
 var velocity = Vector2.ZERO
 var bulletPath = preload('res://Bullet.tscn')
+
 
 func get_input():
 	velocity = Vector2()
@@ -30,6 +31,7 @@ func shoot():
 func _physics_process(delta):
 	if(Global.youLose):
 		queue_free()
+		get_tree().change_scene("res://EndScene.tscn")
 	get_input()
 	velocity = move_and_slide(velocity)
 
