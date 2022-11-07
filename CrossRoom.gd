@@ -40,12 +40,6 @@ func _ready():
 		$Bottom.visible = true
 		$Bottom.set_collision_layer(2)
 		$Bottom.set_collision_mask(2)
-		$Lift.visible = false
-	else:
-		$Lift.visible = true
-		$Lift.set_collision_layer(2)
-		$Lift.set_collision_mask(2)
-		$Bottom.visible = false
 	
 	
 	$UI/Position.text = "Current Room: " +  str(Global.curPos)

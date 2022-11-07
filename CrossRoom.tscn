@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://CrossRoom.gd" type="Script" id=1]
-[ext_resource path="res://sprites/lift_controls.png" type="Texture" id=2]
 [ext_resource path="res://alice-in-dark-wonderland-123894.mp3" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -21,9 +20,6 @@ extents = Vector2( 12, 359.999 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 384.5, 53.5 )
-
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 47, 68.25 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 78, 190.5 )
@@ -120,34 +116,6 @@ shape = SubResource( 5 )
 [node name="CenterSpawn" type="Position2D" parent="."]
 position = Vector2( 486, 271 )
 
-[node name="Lift" type="StaticBody2D" parent="."]
-position = Vector2( 264, 430 )
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lift"]
-position = Vector2( 274, 115 )
-shape = SubResource( 6 )
-
-[node name="Sprite" type="Sprite" parent="Lift"]
-position = Vector2( 271, -27 )
-scale = Vector2( 2.34375, 2.875 )
-texture = ExtResource( 2 )
-
-[node name="ColorRect" type="ColorRect" parent="Lift"]
-margin_left = -105.0
-margin_top = 63.0
-margin_right = 601.0
-margin_bottom = 170.0
-color = Color( 0, 0, 0, 1 )
-
-[node name="Area2D" type="Area2D" parent="Lift"]
-position = Vector2( 273, 19 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lift/Area2D"]
-position = Vector2( 2, -23.75 )
-shape = SubResource( 8 )
-
 [node name="Top" type="StaticBody2D" parent="."]
 visible = false
 position = Vector2( 255, 13 )
@@ -223,5 +191,3 @@ stream = ExtResource( 3 )
 [connection signal="body_entered" from="TransitionDown" to="." method="_on_TransitionDown_body_entered"]
 [connection signal="body_entered" from="TransitionUp" to="." method="_on_TransitionUp_body_entered"]
 [connection signal="body_entered" from="TransitionRight" to="." method="_on_TransitionRight_body_entered"]
-[connection signal="body_entered" from="Lift/Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Lift/Area2D" to="." method="_on_Area2D_body_exited"]
